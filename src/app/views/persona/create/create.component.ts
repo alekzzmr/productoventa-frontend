@@ -16,14 +16,6 @@ export class CreateComponent implements OnInit {
   feedback: any;
   email = new FormControl('', [Validators.required]);
 
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-  }
-
   constructor(private dialogRef: MatDialogRef<CreateComponent>, private service: PersonaService,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
 

@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>{{data.titulo}}</h1>
+<div mat-dialog-content>
+  <form class="example-container" [formGroup]="form" #frmPersona="ngForm">
+    <div [hidden]="true">
+      <mat-form-field appearance="fill">
+        <mat-label>Id</mat-label>
+        <input matInput required formControlName="idProducto">
+      </mat-form-field>
+    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre del producto</mat-label>
+      <input matInput required formControlName="nombre">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Marca</mat-label>
+      <input matInput required formControlName="marca">
+    </mat-form-field>
+  </form>
+</div>
+<div div mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close >Cerrar</button>
+  <button mat-raised-button color="primary" (click)="guardar(frmPersona)" [disabled]="frmPersona.invalid">Guardar</button>
+</div>

@@ -10,6 +10,7 @@ import { VentaComponent } from './views/venta/venta.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material/material.module';
 import { CreateComponent } from './views/persona/create/create.component';
+import { DialogComponent } from './views/producto/dialog/dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PersonaComponent,
     ProductoComponent,
     VentaComponent,
-    CreateComponent
+    CreateComponent,
+    DialogComponent
   ],
 
   imports: [
